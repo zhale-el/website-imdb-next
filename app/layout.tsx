@@ -3,11 +3,12 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 
 import Header from "../components/header";
+import Providers from "../context";
 
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Create IMDB clone",
+  title: "IMDB clone",
   description: "This is movie database clone",
 };
 
@@ -19,9 +20,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        <Header />
+        <Providers>
+          <Header />
 
-        {children}
+          {children}
+        </Providers>
       </body>
     </html>
   );
