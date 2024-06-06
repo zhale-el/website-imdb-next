@@ -19,7 +19,6 @@ const Home = async ({ searchParams }) => {
   }
 
   const results = data.results;
-  console.log(results);
 
   return (
     <>
