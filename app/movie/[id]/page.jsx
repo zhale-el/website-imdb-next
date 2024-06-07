@@ -7,7 +7,7 @@ const MoviePage = async ({ params }) => {
     `https://api.themoviedb.org/3/movie/${movieId}?api_key=${process.env.API_KEY}`
   );
   const movie = await res.json();
-  console.log(movie);
+
   return (
     <div className="w-full">
       <div className="p-4 md:pt-8 flex flex-col lg:flex-row content-center max-w-6xl mx-auto md:space-x-6">

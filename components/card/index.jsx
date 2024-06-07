@@ -3,7 +3,7 @@ import Image from "next/image";
 import { FaStar } from "react-icons/fa6";
 const Card = ({ result }) => {
   return (
-    <div className="group border border-gray-300 sm:rounded-md dark:bg-gray-600 bg-amber-50 p-2 md:p-6 m-2 cursor-pointer sm:hover:shadow-slate-400 sm:shadow-md rounded-lg transition-shadow duration-200">
+    <div className="group border border-gray-300 sm:rounded-md dark:bg-gray-600 bg-amber-50 p-2 md:p-4 m-2 cursor-pointer sm:hover:shadow-slate-400 sm:shadow-md rounded-lg transition-shadow duration-200">
       <Link href={`/movie/${result.id}`}>
         <Image
           src={`https://image.tmdb.org/t/p/original/${
@@ -12,6 +12,7 @@ const Card = ({ result }) => {
           width={500}
           height={300}
           className="group-hover:opacity-75 transition-opacity duration-300"
+          alt="movie"
         />
 
         <div>
